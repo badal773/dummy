@@ -1,0 +1,21 @@
+## ORCHESTRATOR
+### config
+| key               | allowedValues   | defaultValue   | description                            |
+|-------------------|-----------------|----------------|----------------------------------------|
+| DUMMY_KEY_ENABLED | [True, False]   | True           | Enables or disables the dummy feature. |
+### secret
+| key         | allowedValues   | defaultValue   | description                                              |
+|-------------|-----------------|----------------|----------------------------------------------------------|
+| DUMMY_TOKEN | ['Token only']  | NULL           | Token used to authenticate code fetch during build time. |
+
+
+
+## KUBELINK
+### config
+| key               | allowedValues   | defaultValue   | description                            |
+|-------------------|-----------------|----------------|----------------------------------------|
+| DUMMY_KEY_ENABLED | [True, False]   | True           | Enables or disables the dummy feature. |
+### secret
+| key         | allowedValues   | defaultValue   | description                                              |
+|-------------|-----------------|----------------|----------------------------------------------------------|
+| DUMMY_TOKEN | ['Token only']  | NULL           | Token used to authenticate code fetch during build time. |
