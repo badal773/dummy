@@ -1,4 +1,4 @@
-name: Internal Configuration Tasks
+name: Internal Tasks
 description: "Template for tasks related to the introduction of new configuration variables, flags, or secrets in microservices."
 title: "INTT: "
 assignees: ["badal773"]
