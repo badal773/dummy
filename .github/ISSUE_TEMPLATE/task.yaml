@@ -30,3 +30,11 @@ body:
                               - Github token only
                             defaultValue: "NULL"
                             description: Github token to fetch code during build time
+  - type: input
+    id: prevalence
+    attributes:
+      label: Bug prevalence
+      description: "How often do you or others encounter this bug?"
+      placeholder: "Example: Whenever I visit the personal account page (1-2 times a week)"
+    validations:
+      required: true
