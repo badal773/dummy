@@ -3,8 +3,8 @@ description: "Template for tasks related to the introduction of new configuratio
 title: "INTT: "
 assignees: ["badal773"]
 projects: ["devtron-labs/6"]
-labels: ["INTERNAL", "CONFIGURATION", "SECRETS"]
-
+labels: ["INTERNAL"]
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
 body:
   - type: dropdown
     attributes:
