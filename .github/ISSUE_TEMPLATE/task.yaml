@@ -14,7 +14,7 @@ body:
       label: "New Configuration Unification"
       render: yaml
       description: "Intended for all who are introducing new configuration variables, flags, or secrets in microservices."
-      placeholder: |
+      value: |
               microservices:
               - name: orchestrator
                 configs:
