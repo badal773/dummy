@@ -10,7 +10,7 @@ body:
       label: checking if there is any change 
       description: if there is any config or secret introduced
       options:
-        - NO
+        - NONE
         - ONLY CONFIG
         - ONLY SECRETS
         - BOTH CONFIG & SECRETS
