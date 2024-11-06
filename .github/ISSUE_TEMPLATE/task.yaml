@@ -5,6 +5,17 @@ assignees: ["badal773"]
 projects: ["devtron-labs/6"]
 labels: ["INTERNAL"]
 body:
+  - type: dropdown
+    attributes:
+      label: checking if there is any change 
+      description: if there is any config or secret introduced
+      options:
+        - NO
+        - ONLY CONFIG
+        - ONLY SECRETS
+        - BOTH CONFIG & SECRETS
+    validations:
+      required: true
 # https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
   - type: textarea
     id: NewConfigurationUnification
@@ -18,7 +29,7 @@ body:
               microservices:
               - name: orchestrator
                 configs:
-                  - key: FEATURE_BUILDX_ENABLED
+                  - key: DUMMY_KEY_ENABLED
                     allowedValues:
                       - true
                       - false
