@@ -1,7 +1,7 @@
 name: Internal Tasks
 description: "Tasks related to internal activities"
 title: "INTT: "
-assignees: ["prakarsh-dt","pawan-mehta-dt"]
+assignees: ["badal773"]
 projects: ["devtron-labs/6"]
 labels: ["INTERNAL"]
 body:
@@ -20,6 +20,32 @@ body:
         - Installer
         - Releases
         - Automation
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+  - type: textarea
+    id: NewConfigurationUnification
+    validations:
+      required: false
+    attributes:
+      label: " New Configuration Unification"
+      description: "Intended for all who are introducing new configuration variables, flags, or secrets in microservices."
+      placeholder: |
+              microservices:
+                  - name: orchestrator
+                    configs:
+                      -     key: FEATURE_BUILDX_ENABLED
+                            allowedValues:
+                              - true
+                              - false
+                            defaultValue: true
+                            description: Flag to enable the buildx feature
+                    secrets:
+                      -     key: GITHUB_TOKEN
+                            allowedValues:
+                              - Github token only
+                            defaultValue: "NULL"
+                            description: Github token to fetch code during build time
+
+
   - type: textarea
     id: task-description
     validations:
