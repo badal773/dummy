@@ -1,42 +1,43 @@
-name: Internal Tasks
-description: "Tasks related to introducing new configuration variables"
+name: Internal Configuration Tasks
+description: "Template for tasks related to the introduction of new configuration variables, flags, or secrets in microservices."
 title: "INTT: "
 assignees: ["badal773"]
 projects: ["devtron-labs/6"]
-labels: ["INTERNAL"]
+labels: ["INTERNAL", "CONFIGURATION", "SECRETS"]
+
 body:
   - type: dropdown
     attributes:
-      label: checking if there is any change 
-      description: if there is any config or secret introduced
+      label: "Configuration and Secret Changes"
+      description: "Select the type of change being introduced: configuration, secrets, or both."
       options:
-        - ONLY CONFIG
-        - ONLY SECRETS
-        - BOTH CONFIG & SECRETS
+        - "Configuration Only"
+        - "Secrets Only"
+        - "Both Configuration and Secrets"
     validations:
       required: true
-# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+
   - type: textarea
-    id: NewConfigurationUnification
+    id: NewConfigurationDetails
     validations:
       required: false
     attributes:
-      label: "New Configuration Unification"
+      label: "New Configuration and Secret Details"
       render: yaml
-      description: "Intended for all who are introducing new configuration variables, flags, or secrets in microservices."
+      description: "Provide details for new configuration variables, flags, or secrets introduced within the microservices. Include details such as allowed values, default values, and descriptions for clarity."
       value: |
-              microservices:
-              - name: orchestrator
-                configs:
-                  - key: DUMMY_KEY_ENABLED
-                    allowedValues:
-                      - true
-                      - false
-                    defaultValue: true
-                    description: Flag to enable the buildx feature
-                secrets:
-                  - key: GITHUB_TOKEN
-                    allowedValues:
-                      - Github token only
-                    defaultValue: "NULL"
-                    description: Github token to fetch code during build time
+        microservices:
+          - name: orchestrator
+            config:
+              - key: DUMMY_KEY_ENABLED
+                allowedValues:
+                  - true
+                  - false
+                defaultValue: true
+                description: "Enables or disables the dummy feature."
+            secrets:
+              - key: DUMMY_TOKEN
+                allowedValues:
+                  - "Token only"
+                defaultValue: "NULL"
+                description: "Token used to authenticate code fetch during build time."
