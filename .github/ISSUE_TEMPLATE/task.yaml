@@ -11,6 +11,7 @@ body:
       label: "Configuration and Secret Changes"
       description: "Select the type of change being introduced: configuration, secrets, or both."
       options:
+        - "None"
         - "Configuration Only"
         - "Secrets Only"
         - "Both Configuration and Secrets"
@@ -26,7 +27,7 @@ body:
       render: yaml
       description: "Provide details for new configuration variables, flags, or secrets introduced within the microservices. Include details such as allowed values, default values, and descriptions for clarity."
       value: |
-        microservices:
+        microserviceConfigs:
           - name: orchestrator
             config:
               - key: DUMMY_KEY_ENABLED
