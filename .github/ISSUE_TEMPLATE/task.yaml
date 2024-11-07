@@ -16,7 +16,7 @@ body:
         - "Secrets Only"
         - "Both Configuration and Secrets"
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: NewConfigurationDetails
